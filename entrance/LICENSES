@@ -4,6 +4,12 @@
  * Released under the MIT License.
  */
 
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
 /**
  * Checks if an event is supported in the current execution environment.
  *
