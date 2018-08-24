@@ -1,0 +1,16 @@
+{{each list as item i}}
+<li>
+	<a class="intelligent-super-list-info " name="list{{i}}">
+
+		<div class="icon-inforList-detail">
+			<h1>{{item.title}}</h1>
+			<p>
+				{{item.detail}}
+			</p>
+		</div>
+		<div class="icon-inforList-img">
+			<img src="{{item.img}}" alt="">
+		</div>
+	</a>
+</li>
+{{/each}}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>订单未发货</title>
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="Keywords" content="全城淘软件,全城淘云ERP,SaaS软件,进销存SaaS,在线进销存软件,在线财务管理,超市管理系统,商场收银系统,服装管理系统,服装管理软件,好帮手服装管理系统,好帮手云平台,服装ERP系统,好帮手软件,好帮手Saas,餐饮软件,餐饮管理软件,收银软件,POS支付">
+	<meta name="Description" content="全城淘云ERP管理系统，是基于云平台架构的在线连锁专卖管理系统，为购物中心、百货商场超市、专营专卖、服装专卖、服装连锁、餐饮娱乐、餐饮管理软件、POS支付、移动互联网企业提供解决方案。服务热线：4006-877-999">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 1001px)" href="../css/style.css">
+	<link rel="shortcut icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="../js/include.js"></script>
+	<script src="../js/respond.js"></script>
+	<script src="../js/require.js"></script>
+	<script src="../js/config.js"></script>
+</head>
+<style>
+	.pc-content {
+		background-color: #f7f8fa;
+	}
+
+</style>
+
+<body>
+	<div class="pc-wrapper">
+		<div class="pc-content">
+			<include src="header.html"></include>
+			<div class="order-detail-header">订单详情</div>
+			<div class="order-detail-wrapper">
+				<div class="nopay-wrapper">
+					<h1>
+						待发货
+					</h1>
+                    <div class="noPay-btn">提醒发货</div>
+				</div>
+				<div class="order-detail-info">
+					<div class="order-commbon">
+						<p>
+							收货信息
+						</p>
+						<ul>
+							<li>
+								收件人：易丹丹
+							</li>
+							<li>
+								手机号：1856773603
+							</li>
+							<li>
+								收货地址：广东省深圳市南山区松坪村竹苑一栋101
+							</li>
+						</ul>
+					</div>
+					<div class="order-commbon">
+						<p>
+							订单信息
+						</p>
+						<ul>
+							<li>
+								订单编号：18062262012201616259
+							</li>
+							<li>
+								成交时间：2018/06/22 15:36:33
+							</li>
+							<li>
+								订单金额：￥1158.99
+							</li>
+							<li>
+								支付方式：支付宝
+							</li>
+							<li>
+								配送方式：快递
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="order-detail-table">
+					<table>
+						<tbody class="order-detail-th">
+							<tr>
+								<td class="td-cener">商品名称</td>
+								<td class="td-cener">数量</td>
+								<td class="td-cener">价格</td>
+							</tr>
+						</tbody>
+						<tbody class="order-detail-td">
+							<tr>
+								<td class="td-cener">
+									<img src="../images/product_01.png">
+									<span>Y-11 PC收银一体机</span>
+								</td>
+								<td class="td-cener">
+									1
+								</td>
+								<td class="td-cener">
+									1258.99
+								</td>
+							</tr>
+							<tr>
+								<td class="order-detail-td-mark" colspan="3">订单备注：</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="order-detail-sumInfo">
+					<p>商品总金额：
+						<span>¥1258.99</span>
+					</p>
+					<p>优惠：
+						<span>
+							-￥100.00
+						</span>
+					</p>
+					<p>实际付款：
+						<span class="order-detail-sumInfo-sp">
+							¥1158.99
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<include src="footer.html"></include>
+	</div>
+	<script>
+		if (document.body.clientWidth <= 1000) {
+			//判断屏幕大小  在移动端下
+			require(['jquery', 'common', 'mobile'], function ($, c_fnc) {
+
+			})
+		} else {
+			require(['jquery', 'common', 'pc'], function ($, c_fnc, pc) {
+				$(function () {
+					pc.init()
+
+				})
+			})
+		}
+
+	</script>
+</body>
+
+</html>

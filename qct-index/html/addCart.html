@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>加入购物车</title>
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="Keywords" content="全城淘软件,全城淘云ERP,SaaS软件,进销存SaaS,在线进销存软件,在线财务管理,超市管理系统,商场收银系统,服装管理系统,服装管理软件,好帮手服装管理系统,好帮手云平台,服装ERP系统,好帮手软件,好帮手Saas,餐饮软件,餐饮管理软件,收银软件,POS支付">
+	<meta name="Description" content="全城淘云ERP管理系统，是基于云平台架构的在线连锁专卖管理系统，为购物中心、百货商场超市、专营专卖、服装专卖、服装连锁、餐饮娱乐、餐饮管理软件、POS支付、移动互联网企业提供解决方案。服务热线：4006-877-999">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 1001px)" href="../css/style.css">
+	<link rel="shortcut icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="../js/include.js"></script>
+	<script src="../js/respond.js"></script>
+	<script src="../js/require.js"></script>
+	<script src="../js/config.js"></script>
+</head>
+<style>
+	.pc-content {
+		background-color: #f7f8fa;
+	}
+
+</style>
+
+<body>
+	<div class="pc-wrapper">
+		<div class="pc-content">
+			<include src="header.html"></include>
+			<div class="buyGoods-navBar">
+				<div class="buyGoods-navBar-wrapper">
+					<a>PC收银一体机</a>
+					<a class="buyGoods-navBar-a">概览</a>
+					<a class="buyGoods-navBar-b">规格参数</a>
+					<a class="buyGoods-btn">购买</a>
+				</div>
+			</div>
+			<div class="pc-addCart">
+				<div class="addCart-wrapper">
+					<img src="../images/success-icon.png" alt="">
+					<div class="addCart-name">
+						<p class="addCart-state">已成功加入购物车！</p>
+						<p>PC收银一体机</p>
+					</div>
+					<div class="addCart-return">
+						返回上一级
+					</div>
+					<div class="addCart-goSum">
+						去购物车结算
+					</div>
+				</div>
+				<div class="more-goods-wrapper">
+					<div class="more-contact-goods">
+						<h1>买购物车中商品的人还买了</h1>
+						<ul class="more-goodsList">
+							<li>
+								<div class="more-imgs">
+									<img src="../images/addCartImg.png" alt="">
+								</div>
+								<div class="more-goods-name">智能pos机</div>
+								<div class="more-goods-price">1599元</div>
+							</li>
+							<li>
+								<div class="more-imgs">
+									<img src="../images/addCartImg.png" alt="">
+								</div>
+								<div class="more-goods-name">智能pos机</div>
+								<div class="more-goods-price">1599元</div>
+							</li>
+							<li>
+								<div class="more-imgs">
+									<img src="../images/addCartImg.png" alt="">
+								</div>
+								<div class="more-goods-name">智能pos机</div>
+								<div class="more-goods-price">1599元</div>
+							</li>
+							<li class="last-margin">
+								<div class="more-imgs">
+									<img src="../images/addCartImg.png" alt="">
+								</div>
+								<div class="more-goods-name">智能pos机</div>
+								<div class="more-goods-price">1599元</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- last-margin 最后一个不要margin -->
+			</div>
+		</div>
+		<include src="footer.html"></include>
+	</div>
+	<script>
+		require(['common'], function (c_fnc) {
+			c_fnc.dynamicLoadJs('../js/addCart.js')
+		})
+
+	</script>
+</body>
+
+</html>

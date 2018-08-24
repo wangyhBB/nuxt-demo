@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>放大镜效果</title>
+	<!-- <link rel="stylesheet" href="../css/style.css"> -->
+	<style>
+		.minView {
+			position: relative;
+			float: left;
+			width: 400px;
+			height: 400px;
+			cursor: move;
+		}
+
+		.move-block {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			height: 200px;
+			background: #ffffcc;
+			border: 1px solid #ccc;
+			filter: alpha(opacity=50);
+			opacity: 0.5;
+		}
+
+		.bigView {
+			border: 1px solid darksalmon;
+			margin-left: 50px;
+			float: left;
+			position: relative;
+			height: 400px;
+			width: 400px;
+			overflow: hidden;
+		}
+
+		.bigView img {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="minView" id="minView">
+		<img src="../images/min1x.jpg" alt="">
+		<div class="move-block" id="move-block"></div>
+	</div>
+	<div class="bigView" id="bigView">
+		<img src="../images/big1x.jpg" alt="">
+	</div>
+</body>
+<script>
+	var oMinView = document.getElementById('minView');
+	var oMoveView = document.getElementById('move-block');
+	var oBigView = document.getElementById('bigView');
+	var oBigViewImg = oBigView.getElementsByTagName('img')[0];
+	console.log(oBigViewImg)
+	console.log(oMoveView.clientWidth)
+	oMinView.onmouseover = function () {
+		oMoveView.style.display = "block";
+	}
+	oMinView.onmousemove = function (ev) {
+		var nMaxLeftDistance = oMinView.offsetWidth - oMoveView.offsetWidth;
+		var nMaxTopDistance = oMinView.offsetHeight - oMoveView.offsetHeight;
+		var _event = ev || window.event; //做兼容性，兼容IE
+		var _left = _event.clientX - oMinView.offsetLeft - oMoveView.offsetWidth / 2;
+		var _top = _event.clientY - oMinView.offsetTop - oMoveView.offsetHeight / 2;
+		if (_left >= nMaxLeftDistance) {
+			_left = nMaxLeftDistance;
+		}
+		if (_left <= 0) {
+			_left = 0;
+		}
+		if (_top <= 0) {
+			_top = 0
+		}
+		if (_top >= nMaxTopDistance) {
+			_top = nMaxTopDistance;
+		}
+		oMoveView.style.left = _left + 'px';
+		oMoveView.style.top = _top + 'px';
+		var l_radio = _left / nMaxLeftDistance;
+		var t_radio = _top / nMaxTopDistance;
+		oBigViewImg.style.left = -((oBigViewImg.offsetWidth - oBigView.offsetWidth) * l_radio) + 'px';
+		oBigViewImg.style.top = -((oBigViewImg.offsetHeight - oBigView.offsetHeight) * t_radio) + 'px';
+		console.log('横向：' + l_radio + '纵向:' + t_radio)
+	}
+	oMinView.onmouseleave = function () {
+		oMoveView.style.display = 'none';
+	}
+
+</script>
+
+</html>

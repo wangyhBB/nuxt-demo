@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<title>公告详情</title>
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="Keywords" content="全城淘软件,全城淘云ERP,SaaS软件,进销存SaaS,在线进销存软件,在线财务管理,超市管理系统,商场收银系统,服装管理系统,服装管理软件,好帮手服装管理系统,好帮手云平台,服装ERP系统,好帮手软件,好帮手Saas,餐饮软件,餐饮管理软件,收银软件,POS支付">
+	<meta name="Description" content="全城淘云ERP管理系统，是基于云平台架构的在线连锁专卖管理系统，为购物中心、百货商场超市、专营专卖、服装专卖、服装连锁、餐饮娱乐、餐饮管理软件、POS支付、移动互联网企业提供解决方案。服务热线：4006-877-999">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 1001px)" href="../css/style.css">
+	<link rel="shortcut icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="../js/include.js"></script>
+	<script src="../js/respond.js"></script>
+	<script src="../js/require.js"></script>
+	<script src="../js/config.js"></script>
+</head>
+<style>
+	.pc-content {
+		background-color: #f7f8fa;
+	}
+
+	.zoomViewImg {
+		display: flex;
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #0d0d0d;
+		z-index: 101;
+		align-items: center;
+	}
+
+	#zoom-view {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+</style>
+
+<body>
+	<div class="pc-wrapper">
+		<div class="pc-content no-padding">
+			<include src="header.html"></include>
+			<div class="detail-wrapper">
+				<div class="detail-left">
+                    <div class="detail-share share-sina" data-type="sina">微博</div>
+                    <div class="detail-share share-qzone" data-type="qzone">Qzone</div>
+                    <div class="detail-share share-wechat" data-type="wechat">微信</div>
+				</div>
+				<div class="detail-right">
+					<h1 class="detail-right-header">一起庆祝吧---福建即富二、三月份员工生日会</h1>
+                    <span class="detail-right-time">全城淘 | 2018-03-24 01:50:43</span>
+                    <div class="detail-right-html">
+                        
+                    </div>
+                </div>
+			</div>
+			<include src="footer.html"></include>
+			<!-- <include src="help.html"></include> -->
+		</div>
+	</div>
+	<div class="app">
+		<!-- <include src="m-header.html"></include> -->
+		<div class="mb-content">
+			<div class="newsDetail-wrapper">
+				<div class="m-newsDetail-header">一起庆祝吧---福建即富二、三月份员工生日 会</div>
+				<div class="m-newsDetail-time">
+					全城淘 | 2018-03-24 01:50:43
+				</div>
+			</div>
+			<div class="m-newsDetail-html">
+				<!-- 关于此次员工生日会 为感谢员工辛勤的付出和努力，让所有过生日的员工在公司度过一个难忘的时刻，公司定于 2018 年 3 月 20 日（周二）为2018 年 2 月份和 3 月份的员工举办了“生日庆祝”活动。 -->
+			</div>
+		</div>
+		<include src="m-footer.html"></include>
+		<!-- <div class="zoomViewImg">
+			<div class="swiper-container" id="zoom-view" style="height: 100%;display: flex;align-items: center;">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="swiper-zoom-container">
+							<img src=" ../images/banner_sy.jpg ">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiper-zoom-container">
+							<img src=" ../images/banner_sy.jpg ">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</div>
+	<script>
+		require(['common', 'jquery'], function (c_fnc) {
+			c_fnc.dynamicLoadJs('../js/newsDetail.js')
+		})
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+@media screen and (max-width: 1601px) {
+	.login-wrapper {
+		height: 576px;
+	}
+	.login-item .login-entrance {
+        width: 340px;
+        margin-right: 30px;
+	}
+	.login-title-tab {
+		width: 232px;
+		font-size: 16px;
+	}
+	.entrance-item {
+		margin: 96px auto 0;
+		width: 288px;
+		height: 346px;
+		border: 1px solid #e5e5e5;
+	}
+	.login-inputs input.code-input {
+		width: 120px;
+	}
+	.login-input-code {
+		width: 90px;
+		font-size: 12px;
+	}
+	.login-inputs {
+		margin: 8px auto;
+		margin-right: auto;
+		width: 230px;
+		height: 40px;
+		border: 1px solid #e5e5e5;
+	}
+	.check-login {
+		width: 230px;
+	}
+	.login-btn {
+		width: 230px;
+		margin: 12px auto 0;
+		height: 38px;
+		border: 1px solid #e5e5e5;
+		line-height: 38px;
+		text-align: center;
+		font-size: 14px;
+    }
+    .blue-btn{
+        background:#f8404b;
+        color:#fff;
+    }
+}

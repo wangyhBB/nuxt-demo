@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>我的购物车</title>
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="Keywords" content="全城淘软件,全城淘云ERP,SaaS软件,进销存SaaS,在线进销存软件,在线财务管理,超市管理系统,商场收银系统,服装管理系统,服装管理软件,好帮手服装管理系统,好帮手云平台,服装ERP系统,好帮手软件,好帮手Saas,餐饮软件,餐饮管理软件,收银软件,POS支付">
+	<meta name="Description" content="全城淘云ERP管理系统，是基于云平台架构的在线连锁专卖管理系统，为购物中心、百货商场超市、专营专卖、服装专卖、服装连锁、餐饮娱乐、餐饮管理软件、POS支付、移动互联网企业提供解决方案。服务热线：4006-877-999">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 1001px)" href="../css/style.css">
+	<link rel="shortcut icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="../js/include.js"></script>
+	<script src="../js/respond.js"></script>
+	<script src="../js/require.js"></script>
+	<script src="../js/config.js"></script>
+</head>
+<style>
+	.pc-content {
+		background-color: #f7f8fa;
+	}
+
+</style>
+
+<body>
+	<div class="pc-wrapper">
+		<div class="pc-content">
+			<include src="header.html"></include>
+			<div class="pc-shoppingCart">
+				<div class="shoppingCart-goodsList">
+					<div></div>
+					<div class="shoppingCart-header">
+						我的购物车
+						<div class="shoppingCart-number">
+							<!-- 购物车（1） -->
+						</div>
+					</div>
+					<table class="shoppingCart-goodsList-header">
+						<tr>
+							<td class="td-225">
+								<span class="checkBox checkBoxAll"></span>
+								全选
+							</td>
+							<td class="td-200">商品名称</td>
+							<td class="td-200">价格（元）</td>
+							<td class="td-200">数量</td>
+							<td class="td-200">小计（元）</td>
+							<td>操作</td>
+						</tr>
+					</table>
+					<table class="shoppingCart-goodsList-wrapper">
+						<tr>
+							<td class="td-225">
+								<span class="checkBox checkBoxItem" data-id="e6569e" data-state="false"></span>
+								<img src="../images/product_01.png" alt="">
+							</td>
+							<td class="td-200">
+								Y-11 PC收银一体机
+								<br>
+								<span style="color: #999999; font-size: 12px;">颜色：极致黑</span>
+							</td>
+							<td class="td-200">
+								<span class="order-price">1258.99</span>
+							</td>
+							<td class="td-200">
+								<div class="shoppingBtns">
+									<div class="shoppingBtns-reduceBtn">-</div>
+									<input type="text" class="shoppingBtns-number" value="1">
+									<div class="shoppingBtns-addBtn">+</div>
+								</div>
+							</td>
+							<td class="td-200" style="color:#f51200;">1258.99</td>
+							<td class="deleteSingle" data-id="essfs99">删除</td>
+						</tr>
+						<tr>
+							<td class="td-225">
+								<span class="checkBox checkBoxItem" data-id="t6654q" data-state="false"></span>
+								<img src="../images/product_01.png" alt="">
+							</td>
+							<td class="td-200">
+								Y-11 PC收银一体机
+								<br>
+								<span style="color: #999999; font-size: 12px;">颜色：极致黑</span>
+							</td>
+							<td class="td-200">
+								<span class="order-price">1258.99</span>
+							</td>
+							<td class="td-200">
+								<div class="shoppingBtns">
+									<div class="shoppingBtns-reduceBtn">-</div>
+									<input type="text" class="shoppingBtns-number" value="1">
+									<div class="shoppingBtns-addBtn">+</div>
+								</div>
+							</td>
+							<td class="td-200" style="color:#f51200;">1258.99</td>
+							<td class="deleteSingle" data-id="essfs99">删除</td>
+						</tr>
+					</table>
+					<table class="shoppingCart-options">
+						<tr>
+							<td class="td-225">
+								<span class="checkBox checkBoxAll"></span>
+								全选
+								<span class="deleteAllWord">删除选中的商品</span>
+							</td>
+							<td class="td-400"></td>
+							<td class="td-400">已选商品
+								<span id="selectNumber">0</span>件，合计:
+								<span style="letter-spacing:0;font-size: 32px;color: #f51200;" id="sum">￥0</span>
+							</td>
+							<td>
+								<div class="cartGoSum">去结算</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="shoppingCart-null">
+					<div class="carNullTips">
+						亲，您的购物车里还没有物品哦，赶紧去
+						<a href="index.html" style="color: rgb(248, 64, 75);">逛逛</a>吧
+					</div>
+				</div>
+			</div>
+		</div>
+		<include src="footer.html"></include>
+	</div>
+	<script>
+		require(['common'], function (c_fnc) {
+			c_fnc.dynamicLoadJs('../js/cart.js')
+		})
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>注册</title>
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="Keywords" content="全城淘软件,全城淘云ERP,SaaS软件,进销存SaaS,在线进销存软件,在线财务管理,超市管理系统,商场收银系统,服装管理系统,服装管理软件,好帮手服装管理系统,好帮手云平台,服装ERP系统,好帮手软件,好帮手Saas,餐饮软件,餐饮管理软件,收银软件,POS支付">
+	<meta name="Description" content="全城淘云ERP管理系统，是基于云平台架构的在线连锁专卖管理系统，为购物中心、百货商场超市、专营专卖、服装专卖、服装连锁、餐饮娱乐、餐饮管理软件、POS支付、移动互联网企业提供解决方案。服务热线：4006-877-999">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 1001px)" href="../css/style.css">
+	<link rel="shortcut icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="../js/include.js"></script>
+	<script src="../js/respond.js"></script>
+	<script src="../js/require.js"></script>
+	<script src="../js/config.js"></script>
+</head>
+<style>
+	.pc-content {
+		background-color: #f7f8fa;
+	}
+
+</style>
+
+<body>
+	<div class="pc-wrapper">
+		<div class="pc-content">
+			<!-- <include src="header.html"></include> -->
+			<div class="register-wrapper container">
+				<div class="register-item">
+					<img src="../images/newLogo.png">
+					<div class="register-title">账号注册</div>
+					<p class="message-number">
+						<!-- 验证短信已发送至15878489653的手机 -->
+					</p>
+					<div class="message-content">
+						<input type="text" placeholder="请输入短信验证码">
+						<div class="message-verify" data-send="1">获取验证码</div>
+					</div>
+					<div class="login-btn blue-btn" id="nexTsliderVerfiy">下一步</div>
+
+				</div>
+			</div>
+		</div>
+		<include src="footer.html"></include>
+	</div>
+	<div class="app">
+		<div class="mb-content mb-login">
+			<h1>
+				账号注册
+			</h1>
+			<div class="out-login-wrapper">
+				<div class="code-to-ctn">验证短信已发送至18150519382</div>
+				<div class="check-step2">
+					<input type="text" class="code-input" placeholder="请输入验证码">
+					<div class="check-step2-verify" data-send="1">获取验证码</div>
+				</div>
+				<a class="login-default-btn danger">
+					下一步
+				</a>
+                <p style="color:#666;margin-top:20px;">短信可能会延时，请耐心等待，如果长时间未收到短信，请60秒后重新获取。</p>
+            </div>
+		</div>
+		<!-- <include src="m-footer.html"></include> -->
+	</div>
+	<script>
+		require(['common', 'jquery'], function (c_fnc) {
+			c_fnc.dynamicLoadJs('../js/registerFinish.js')
+		})
+
+	</script>
+</body>
+
+</html>

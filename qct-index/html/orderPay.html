@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>订单支付</title>
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="Keywords" content="全城淘软件,全城淘云ERP,SaaS软件,进销存SaaS,在线进销存软件,在线财务管理,超市管理系统,商场收银系统,服装管理系统,服装管理软件,好帮手服装管理系统,好帮手云平台,服装ERP系统,好帮手软件,好帮手Saas,餐饮软件,餐饮管理软件,收银软件,POS支付">
+	<meta name="Description" content="全城淘云ERP管理系统，是基于云平台架构的在线连锁专卖管理系统，为购物中心、百货商场超市、专营专卖、服装专卖、服装连锁、餐饮娱乐、餐饮管理软件、POS支付、移动互联网企业提供解决方案。服务热线：4006-877-999">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 1001px)" href="../css/style.css">
+	<link rel="shortcut icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="../js/include.js"></script>
+	<script src="../js/respond.js"></script>
+	<script src="../js/require.js"></script>
+	<script src="../js/config.js"></script>
+</head>
+<style>
+	.pc-content {
+		background-color: #f7f8fa;
+	}
+
+</style>
+
+<body>
+	<div class="pc-wrapper">
+		<div class="pc-content ">
+			<include src="header.html"></include>
+			<div class="order-pay-wapper">
+				<div class="order-pay-header">全城淘收银台</div>
+				<div class="order-pay-info">
+					<div class="order-pay-info-top">
+						<h1>
+							订单已提交成功，请您尽快付款！应付金额：
+							<em style="color:#f51200;">￥1158.99</em>
+						</h1>
+						<span>
+							请您在提交订单后
+							<em style="color:#3399ff;">24小时</em>内完成支付，否则订单自动会取消
+						</span>
+					</div>
+					<div class="order-pay-info-bottom">
+						<h1 class="showUp">订单详情</h1>
+						<div class="order-pay-info-list">
+							<p>
+								订单编号：18062262012201616259
+							</p>
+							<p>
+								商品名称：Y75s全网通 4GB+32GB 香槟金 x2
+							</p>
+							<p>
+								交易金额：2196.00
+							</p>
+							<p>
+								交易时间：2018-06-22 17:13:32
+							</p>
+							<p>
+								收货地址：kkk 185****3603 广东省深圳市南山区松坪村竹苑
+							</p>
+						</div>
+					</div>
+					<div class="order-pay-state"></div>
+
+				</div>
+				<div class="order-pay-chose">
+					<h1>
+						支付方式
+					</h1>
+					<div class="choseTab">
+						<div class="choseItem chosed">
+							<img src="../images/ali-pay.png">
+							<span>支付宝支付</span>
+							<span class="chose-spcial">推荐</span>
+							<div class="aliPay-qcode">
+								<img src="../images/ali-qcode.png" alt="">
+								<p class="aliPay-qcode-name">支付宝扫码支付</p>
+								<div class="pay-qcode-login">账户登录支付</div>
+							</div>
+						</div>
+						<div class="choseItem">
+							<img src="../images/wechat-pay.png">
+							<span>微信支付</span>
+							<div class="aliPay-qcode">
+								<img src="../images/wechat-qcode.png" alt="">
+								<p class="aliPay-qcode-name">微信码支付</p>
+								<div class="pay-qcode-login">账户登录支付</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="order-pay-money">
+						<span class="order-pay-money-number">
+							应付总额：
+							<em>
+								¥1598.00
+							</em>
+						</span>
+						<span class="order-pay-btn">确认支付</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<include src="footer.html"></include>
+	</div>
+	<script src="../js/orderPay.js?date=20180713"></script>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>确认订单</title>
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="Keywords" content="全城淘软件,全城淘云ERP,SaaS软件,进销存SaaS,在线进销存软件,在线财务管理,超市管理系统,商场收银系统,服装管理系统,服装管理软件,好帮手服装管理系统,好帮手云平台,服装ERP系统,好帮手软件,好帮手Saas,餐饮软件,餐饮管理软件,收银软件,POS支付">
+	<meta name="Description" content="全城淘云ERP管理系统，是基于云平台架构的在线连锁专卖管理系统，为购物中心、百货商场超市、专营专卖、服装专卖、服装连锁、餐饮娱乐、餐饮管理软件、POS支付、移动互联网企业提供解决方案。服务热线：4006-877-999">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 1001px)" href="../css/style.css">
+	<link rel="shortcut icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="../js/include.js"></script>
+	<script src="../js/respond.js"></script>
+	<script src="../js/require.js"></script>
+	<script src="../js/config.js"></script>
+</head>
+<style>
+	.pc-content {
+		background-color: #f7f8fa;
+	}
+
+</style>
+
+<body>
+	<div class="pc-wrapper">
+		<div class="pc-content">
+			<include src="header.html"></include>
+			<div class="confirm-order">
+				<div class="shoppingCart-header">
+					确认订单信息
+				</div>
+				<div class="addressWrapper">
+                    <!-- 区分地址分区 模板管理起来 -->
+					<div class="addressHeader">收货人信息</div>
+					<div class="addressList">
+						<div class="addressItem selectAddressItem">
+							<div class="address-phone-name">
+								<span class="name-word">王明</span>
+								<span class="phone-word">153****5363</span>
+							</div>
+							<div class="address-detail">
+								广东省 潮州市 饶平县 星都花园A 座201#
+							</div>
+							<div class="address-default">
+								【设为默认地址】
+							</div>
+						</div>
+						<div class="addressItem selectAddressItem selectDefault">
+							<div class="address-phone-name">
+								<span class="name-word">王明</span>
+								<span class="phone-word">153****5363</span>
+							</div>
+							<div class="address-detail">
+								广东省 潮州市 饶平县 星都花园A 座201#
+							</div>
+							<div class="address-default">
+								【设为默认地址】
+							</div>
+						</div>
+						<div class="addressItem addRessBtn">
+							<span>添加新地址</span>
+						</div>
+					</div>
+				</div>
+				<div class="confirm-list clearfix">
+					<div class="confirm-list-header">商品信息</div>
+					<table class="confirm-tabList-header">
+						<tr>
+							<td class="td-img"></td>
+							<td class="td-name">商品名称</td>
+							<td class="td-price">价格（元）</td>
+							<td>数量</td>
+						</tr>
+					</table>
+					<table class="confirm-tablist">
+						<tr>
+							<td class="td-img">
+								<img src="../images/product_01.png" alt="">
+							</td>
+							<td class="td-name">
+								Y-11 PC收银一体机
+								<br>
+								<span>颜色：极致黑</span>
+							</td>
+							<td class="td-price">1258.99</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td class="td-img">
+								<img src="../images/product_01.png" alt="">
+							</td>
+							<td class="td-name">
+								Y-11 PC收银一体机
+								<br>
+								<span>颜色：极致黑</span>
+							</td>
+							<td class="td-price">1258.99</td>
+							<td>1</td>
+						</tr>
+					</table>
+
+				</div>
+				<div class="discount-item">
+					<div class="discount-header">
+						使用优惠券
+					</div>
+					<div class="discount-tabs">
+						<div class="discount-tabs-item discount-tabs-show">
+							可用(2)
+							<span class="discount-tabs-blank"></span>
+						</div>
+						<div class="discount-tabs-item ">不可用(2)
+							<span class="discount-tabs-blank"></span>
+						</div>
+						<div class="discount-tabs-item">领取码
+							<span class="discount-tabs-blank"></span>
+						</div>
+					</div>
+					<!-- 可以用 -->
+					<div class="chose-discount-item discount-type-show">
+						<div class="discount-paples">
+							<div class="discount-paples-items">
+								<div class="discount-btn canuse">立即使用</div>
+								<div class="discount-juan-price">
+									<span>
+										<i>￥</i>50</span>
+									<em>代金券</em>
+								</div>
+								<div class="discount-juan-time">
+									<span>有效时间：</span>
+									<span>2017.05.01—2017.05.31</span>
+								</div>
+							</div>
+							<div class="discount-paples-items">
+								<div class="discount-btn">立即使用</div>
+								<div class="discount-juan-price">
+									<span>
+										<i>￥</i>50</span>
+									<em>代金券</em>
+								</div>
+								<div class="discount-juan-time">
+									<span>有效时间：</span>
+									<span>2017.05.01—2017.05.31</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 不可以用 -->
+					<div class="chose-discount-item">
+						<div class="discount-paples">
+							<div class="discount-paples-items overTime-paples-item">
+								<div class="discount-btn overTimeUse">立即使用</div>
+								<div class="discount-juan-price">
+									<span>
+										<i>￥</i>50</span>
+									<em>代金券</em>
+								</div>
+								<div class="discount-juan-time">
+									<span>有效时间：</span>
+									<span>2017.05.01—2017.05.31</span>
+								</div>
+							</div>
+							<div class="discount-paples-items overTime-paples-item">
+								<div class="discount-btn overTimeUse">立即使用</div>
+								<div class="discount-juan-price">
+									<span>
+										<i>￥</i>50</span>
+									<em>代金券</em>
+								</div>
+								<div class="discount-juan-time">
+									<span>有效时间：</span>
+									<span>2017.05.01—2017.05.31</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 手动获取 -->
+					<div class="chose-discount-item">
+						<div class="discount-tips">
+							添加从其他途径获取的优惠券：
+						</div>
+						<div class="discount-input">
+							<input type="text" placeholder="请输入优惠卷码">
+							<span>添加</span>
+						</div>
+					</div>
+				</div>
+				<div class="confirm-remarks">
+					<div class="confirm-remarks-header">
+						订单备注
+					</div>
+					<textarea name="" id="" placeholder="添加300个字，若有特殊需求，请联系客服人员"></textarea>
+				</div>
+				<div class="confirm-money-list">
+					<div class="confirm-money-infor-wrapper">
+						<div class="confirm-money-infor">已选1件商品，合计（不含运费）：¥1798.00</div>
+						<div class="confirm-money-infor">运费：¥0.00</div>
+						<div class="confirm-money-infor">优惠：¥0.00</div>
+					</div>
+					<div class="confirm-money-infor confirm-last-money">应付总额：
+						<span>¥1598.000</span>
+					</div>
+					<div class="confirm-money-btn">
+						<div class="confirm-btn">提交订单</div>
+					</div>
+				</div>
+				<!-- 优惠券的弹窗 -->
+				<div class="discount-chose">
+					<div class="discount-wrapper">
+						<div class="discount-paples-items discount-sp">
+							<div class="discount-btn canuse">立即领取</div>
+							<div class="discount-juan-price">
+								<span>
+									<i>￥</i>50</span>
+								<em>代金券</em>
+							</div>
+							<div class="discount-juan-time">
+								<span>有效时间：</span>
+								<span>2017.05.01—2017.05.31</span>
+							</div>
+						</div>
+						<div class="closeDiscount"></div>
+					</div>
+				</div>
+				<!-- 优惠券输入错误提示 暂时还没做 -->
+
+				<!-- 添加新地址 -->
+				<div class="addRess-options-wrapper">
+					<div class="addRess-content">
+						<div class="addRess-close"></div>
+						<h1>新建收货地址</h1>
+						<div class="address-form">
+							<label>
+								<em style="color:#f40000;">*</em> 收货人：</label>
+							<input type="text">
+						</div>
+						<div class="address-form">
+							<label>
+								<em style="color:#f40000;">*</em> 手机号码：</label>
+							<input type="text">
+						</div>
+						<div class="address-form">
+							<label>
+								<em style="color:#f40000;">*</em> 收货地区</label>
+							<select name="province" id="province">
+								<option value="-1" id="choosePro">请选择</option>
+							</select>
+							<select name="city" id="citys">
+								<option value="请选择" id="chooseCity">请选择城市</option>
+							</select>
+							<select name="county" id="county">
+								<option value="请选择" id="chooseCounty">请选择区/县</option>
+							</select>
+						</div>
+						<div class="address-form">
+							<label>
+								<em style="color:#f40000;">*</em>详细地址：</label>
+							<input type="text">
+						</div>
+						<div class="address-form">
+							<label></label>
+							<span class="checkBox" data-state="false" style="margin-left: 0"></span>
+							设置为默认
+						</div>
+						<div class="address-form-submit">保存</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<include src="footer.html"></include>
+	</div>
+	<script src="../js/city.js"></script>
+	<script>
+		require(['common'], function (c_fnc) {
+			c_fnc.dynamicLoadJs('../js/confirmOrder.js')
+		})
+
+	</script>
+</body>
+
+</html>

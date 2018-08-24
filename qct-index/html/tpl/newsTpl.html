@@ -1,0 +1,20 @@
+{{each list}}
+<li>
+	<div class="newsListContent-img">
+		<a style="background-image: url('{{$value.img}}')"></a>
+	</div>
+	<div class="newsContent-info">
+		<h3>{{$value.title}} {{$value.sex | sex}}</h3>
+		<p>
+			{{$value.detail}}
+			<a class="newsDetail-btn" data-id="{{$value.id}}">【全文】</a>
+		</p>
+		<div class="calendar-time">
+			<div class="calendar-icon"></div>
+			<p>
+				{{$value.time}}
+			</p>
+		</div>
+	</div>
+</li>
+{{/each}}

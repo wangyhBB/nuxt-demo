@@ -1,0 +1,31 @@
+{{each list as item i}} 
+    {{if i % 2 == 0}}
+    <li class="doubbleBg">
+        <a class="intelligent-super-list-info " name="list{{i}}">
+            <div class="intelligent-super-list-info-left">
+                <img src="{{item.img}}" alt="">
+            </div>
+            <div class="intelligent-super-list-info-right">
+                <h1>{{item.title}}</h1>
+                <p>
+                    {{item.detail}}
+                </p>
+            </div>
+        </a>
+    </li>
+    {{else}}
+    <li>
+        <a class="intelligent-super-list-info " name="list{{i}}">
+            <div class="intelligent-super-list-info-right">
+                <h1>{{item.title}}</h1>
+                <p>
+                    {{item.detail}}
+                </p>
+            </div>
+            <div class="intelligent-super-list-info-left">
+                <img src="{{item.img}}" >
+            </div>
+        </a>
+    </li>
+    {{/if}} 
+{{/each}}

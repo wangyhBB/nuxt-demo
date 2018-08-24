@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>注册</title>
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="Keywords" content="全城淘软件,全城淘云ERP,SaaS软件,进销存SaaS,在线进销存软件,在线财务管理,超市管理系统,商场收银系统,服装管理系统,服装管理软件,好帮手服装管理系统,好帮手云平台,服装ERP系统,好帮手软件,好帮手Saas,餐饮软件,餐饮管理软件,收银软件,POS支付">
+	<meta name="Description" content="全城淘云ERP管理系统，是基于云平台架构的在线连锁专卖管理系统，为购物中心、百货商场超市、专营专卖、服装专卖、服装连锁、餐饮娱乐、餐饮管理软件、POS支付、移动互联网企业提供解决方案。服务热线：4006-877-999">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<!-- <script type="text/javascript" src="//captcha.guard.qcloud.com/template/TCapIframeApi.js?appid=1253204159&amp;clientype=2&amp;lang=2052&amp;asig=iMnO8ceExkFDexg03g5YzP95bZji8d5rprh6uA7S8uRf56RbUwasFK5td1H7Mol9wEmFlhymzOUcXK69aZbNKykXV0rwZheT" id="scdd"></script> -->
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 1001px)" href="../css/style.css">
+	<link rel="shortcut icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="../js/include.js"></script>
+	<script src="../js/respond.js"></script>
+	<script src="../js/require.js"></script>
+	<script src="../js/config.js"></script>
+</head>
+<style>
+	.pc-content {
+		background-color: #f7f8fa;
+	}
+
+</style>
+
+<body>
+	<div class="pc-wrapper">
+		<div class="pc-content">
+			<!-- <include src="header.html"></include> -->
+			<div class="register-wrapper container">
+				<div class="register-item">
+					<img src="../images/newLogo.png">
+					<div class="register-title">账号注册</div>
+					<div class="login-inputs">
+						<input type="text" id="tel" name="tel" placeholder="请输入手机号码">
+					</div>
+					<div class="check-login">
+						<div class="chekckBoxItem" style="width: 100%;">
+							<input type="checkbox" id="checkBox" checked>
+							<label for="checkBox"> 我已阅读并接受
+								<em style="color: #333333;">《全城淘服务协议》</em>
+							</label>
+						</div>
+					</div>
+					<div class="login-btn blue-btn" id="nexTsliderVerfiy">下一步</div>
+				</div>
+				<div class="slder-mask">
+					<div id="mpanel4" class="slider-verify">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div id="TCaptcha" style="width:300px;height: 310px;"></div> -->
+		<include src="footer.html"></include>
+	</div>
+	<div class="app">
+		<div class="mb-content mb-login">
+			<h1>
+				账号注册
+			</h1>
+			<div class="out-login-wrapper">
+				<form id="login-form">
+					<label for="accountInput">
+						<input type="text" id="accountInput" placeholder="请输入手机号">
+					</label>
+				</form>
+				<div class="checkLoginTimes">
+					<div class="">
+						<input type="checkbox" id="checkLogin" checked>
+						<label for="checkLogin"> 我已阅读并接受
+                            <span>《全城淘服务协议》</span>
+                        </label>
+					</div>
+				</div>
+				<a class="login-default-btn danger" href="registerFinish.html?tel=18150519382">
+					下一步
+				</a>
+			</div>
+		</div>
+		<!-- <include src="m-footer.html"></include> -->
+	</div>
+	<script>
+		require(['common', 'jquery'], function (c_fnc) {
+			c_fnc.dynamicLoadCss('../css/verify.css')
+			c_fnc.dynamicLoadJs('../js/verify.js')
+			c_fnc.dynamicLoadJs('../js/register.js')
+		})
+
+	</script>
+</body>
+
+</html>

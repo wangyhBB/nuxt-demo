@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>账户中心</title>
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="Keywords" content="全城淘软件,全城淘云ERP,SaaS软件,进销存SaaS,在线进销存软件,在线财务管理,超市管理系统,商场收银系统,服装管理系统,服装管理软件,好帮手服装管理系统,好帮手云平台,服装ERP系统,好帮手软件,好帮手Saas,餐饮软件,餐饮管理软件,收银软件,POS支付">
+	<meta name="Description" content="全城淘云ERP管理系统，是基于云平台架构的在线连锁专卖管理系统，为购物中心、百货商场超市、专营专卖、服装专卖、服装连锁、餐饮娱乐、餐饮管理软件、POS支付、移动互联网企业提供解决方案。服务热线：4006-877-999">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 1001px)" href="../css/style.css">
+	<link rel="shortcut icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="../js/include.js"></script>
+	<script src="../js/respond.js"></script>
+	<script src="../js/require.js"></script>
+	<script src="../js/config.js"></script>
+</head>
+<style>
+	.pc-content,
+	.mb-content {
+		background-color: #f7f8fa;
+	}
+
+</style>
+
+<body>
+	<div class="pc-wrapper">
+		<div class="pc-content">
+			<include src="header.html"></include>
+			<div class="personCenter">
+                <div class="personCenter-wrapper">
+                    <img src="../images/newLogo.png">
+                    <h1>账号中心</h1>
+                    <div class="account-info">
+                        <span class="account-info-number">
+                            qct15858585858
+                        </span>
+                        <span class="out-login">
+                            退出账号
+                        </span>
+                    </div>
+                    <div class="account-info-item">
+                        <div class="account-info-item-link" style="border-bottom: 1px solid #e5e5e5;">
+                            <div class="account-icon-wrapper">
+                                <div class="account-info-icon"></div>
+                            </div>
+                            <div class="account-info-title">
+                                <p style="color: #333333;">账号密码</p>
+                                <p style="color: #999999;">用户保护账号信息和登录安全</p>
+                            </div>
+                            <div class="account-info-btn" id="account-info-edit">
+                                修改
+                            </div>
+                        </div>
+                        <div class="account-info-item-link">
+                            <div class="account-icon-wrapper">
+                                <div class="account-info-icon account-info-icon1"></div>
+                            </div>
+                            <div class="account-info-title">
+                                <p style="color: #333333;">安全手机 185****3603</p>
+                                <p style="color: #999999;">安全手机可用于登录全程淘账号，找回密码和安全验证</p>
+                            </div>
+                            <div class="account-info-btn" id="authon-info-edit">
+                                修改
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<!-- 修改密码 -->
+				<div class="account-mask" id="password-model">
+					<div class="remark-password">
+						<h1>修改密码</h1>
+						<div class="remark-password-input">
+							<div class="remark-password-name">原密码</div>
+							<div class="remark-password-input-content">
+								<input type="password" placeholder="请输入旧密码">
+							</div>
+						</div>
+						<div class="remark-password-input">
+							<div class="remark-password-name">新密码</div>
+							<div class="remark-password-input-content">
+								<input id="newPassword" style="width: 82%;" type="password" placeholder="请输入新密码（8-16位字母和数字组合）">
+								<div class="password-show"></div>
+							</div>
+							<div class="remark-password-input-content">
+								<input type="password" placeholder="请再次输入新密码">
+							</div>
+						</div>
+						<div class="remark-password-btn">
+							完成
+						</div>
+						<div class="closeDiscount">
+						</div>
+					</div>
+				</div>
+				<!-- 身份验证 -->
+				<div class="account-mask" id="authentication-model">
+					<div class="remark-password">
+						<h1>身份验证</h1>
+						<p class="remark-tips-title">为了保护您的账号安全，需要验证您的身份</p>
+						<div class="authen-content">
+							<p class="authen-number">验证码已发送至185****3603</p>
+							<div class="authen-input">
+								<input type="text" placeholder="请输入短信验证码">
+								<div class="verifyBtn" data-send="1" id="authen-verify">获取验证码</div>
+							</div>
+							<div class="remark-password-btn" id="authen-click">
+								验证
+							</div>
+							<p class="authen-tips">
+								短信可能会有延时，请耐心等待，如果长时间未收到短信，请60秒 后重新获取。
+							</p>
+						</div>
+						<div class="closeDiscount">
+						</div>
+					</div>
+				</div>
+				<!-- 绑定手机信息 -->
+				<div class="account-mask" id="bind-cell-model">
+					<div class="remark-password">
+						<h1>绑定安全手机</h1>
+						<div class="bind-content">
+							<div class="bind-input">
+								<input type="text" placeholder="请输入要绑定的手机号码">
+							</div>
+							<div class="bind-input">
+								<input type="text" style="width: 210px;" placeholder="请输入短信验证码">
+								<div class="verifyBtn" data-send="1" id="bind-verify">
+									获取验证码
+								</div>
+							</div>
+							<div class="remark-password-btn">
+								完成
+							</div>
+							<p class="authen-tips">
+								短信可能会有延时，请耐心等待，如果长时间未收到短信，请60秒 后重新获取。
+							</p>
+						</div>
+						<div class="closeDiscount">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<include src="footer.html"></include>
+		<include src="help.html"></include>
+	</div>
+	<script>
+		require(['common'], function (c_fnc) {
+			c_fnc.dynamicLoadJs('../js/accountCenter.js')
+		})
+
+	</script>
+</body>
+
+</html>
