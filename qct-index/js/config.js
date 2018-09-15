@@ -25,11 +25,6 @@ require.config({
 			// exports:''
 		},
 		mobile: {
-			deps: [
-                'jquery'
-                // ,
-				// 'css!../css/mobile.css'
-			]
 		},
 		pc: {
 			deps: [

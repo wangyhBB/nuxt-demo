@@ -1,0 +1,15 @@
+��Ŀ���� require.js ����ģ�黯���� �����ڷ������´򿪵�ǰĿ¼ xxx.xxx.xxx.com/html/index.html
+ 
+
+html -> ҳ��  header.html Ϊͷ���ļ� footer.html �ײ��ļ�
+html/tpl -> Ϊģ���ļ�
+
+css -> ��ʽ�ļ�  ���� login.css  ��¼��ʽ style.css Ϊpc��ʽ   mobile.css Ϊ�ƶ�����ʽ
+
+
+js -> js/libΪ������ļ���
+js -> ����Ϊ����ҳ��ű��ļ�
+
+images -> ͼƬ�ļ���
+
+fonts -> ������ļ���

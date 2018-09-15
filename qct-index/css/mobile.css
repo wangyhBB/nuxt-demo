@@ -598,8 +598,8 @@ b.shoppingLogin {
 	color: #999999;
 	text-align: center;
 	font-size: 0.24rem;
-	height: 0.64rem;
-	line-height: 0.64rem;
+	/* height: 0.64rem; */
+	line-height: 0.42rem;
 	border-top: 1px solid #e5e5ee;
 }
 

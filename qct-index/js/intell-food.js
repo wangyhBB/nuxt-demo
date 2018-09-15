@@ -155,66 +155,121 @@ var list = [{
     detail: '采用先进的账号体系设计理念，一个手机号跨业态管控所有的门店，帮助那些同时拥有餐饮门店、商超门店、鞋服门店、酒吧会所的老板轻松、便捷管理店铺'
 }];
 
-if (document.body.clientWidth <= 1000) {
-	//判断屏幕大小  在移动端下
-	require([
-		'common',
-		'template',
-		'text!../html/tpl/m-intelligentIcon.html',
-		'text!../html/tpl/m-intelligentList.html',
-		'mobile'
-	], function (c_fnc, template, icons, lists, mb) {
-		mb.init()
-		var render = template.compile(icons)
-		var html = render({
-			icons: iconsData
-		})
-		$('.m-icons-wrapper').html(html);
-		$('.m-icons-more').on('click', function () {
-			if ($(this).text() == '查看更多') {
-				$(this).text('收起')
-			} else {
-				$(this).text('查看更多')
-			}
-			$('.m-icons-wrapper').toggleClass('m-showMore')
-		})
-		var render1 = template.compile(lists)
-		var html1 = render1({
-			list: list
-		})
-		$('.icon-inforList').html(html1)
-	})
-} else {
-	require([
-		'common',
-		'jquery',
-		'text!../html/tpl/intelligentIcon.html',
-		'text!../html/tpl/intelligentList.html',
-		'template',
-		'pc'
-	], function (c_fnc, $, icons, lists, template, pc) {
-		$(function () {
-			pc.init();
-			$('.nav-items a').eq(0).css('color', '#f8404b');
-			var render = template.compile(icons)
-			var html = render({
-				icons: iconsData
-			})
-			$('.intelligent-super-logo-icons').html(html);
-			$('.intelligent-button').on('click', function () {
-				if ($(this).text() == '查看更多') {
-					$(this).text('收起')
-				} else {
-					$(this).text('查看更多')
-				}
-				$('.intelligent-super-logo-icons').toggleClass('showMore')
-			})
+// if (document.body.clientWidth <= 1000) {
+// 	//判断屏幕大小  在移动端下
+// 	require([
+// 		'common',
+// 		'template',
+// 		'text!../html/tpl/m-intelligentIcon.html',
+// 		'text!../html/tpl/m-intelligentList.html',
+// 		'mobile'
+// 	], function (c_fnc, template, icons, lists, mb) {
+// 		mb.init()
+// 		var render = template.compile(icons)
+// 		var html = render({
+// 			icons: iconsData
+// 		})
+// 		$('.m-icons-wrapper').html(html);
+// 		$('.m-icons-more').on('click', function () {
+// 			if ($(this).text() == '查看更多') {
+// 				$(this).text('收起')
+// 			} else {
+// 				$(this).text('查看更多')
+// 			}
+// 			$('.m-icons-wrapper').toggleClass('m-showMore')
+// 		})
+// 		var render1 = template.compile(lists)
+// 		var html1 = render1({
+// 			list: list
+// 		})
+// 		$('.icon-inforList').html(html1)
+// 	})
+// } else {
+// 	require([
+// 		'common',
+// 		'jquery',
+// 		'text!../html/tpl/intelligentIcon.html',
+// 		'text!../html/tpl/intelligentList.html',
+// 		'template',
+// 		'pc'
+// 	], function (c_fnc, $, icons, lists, template, pc) {
+// 		$(function () {
+// 			pc.init();
+// 			$('.nav-items a').eq(0).css('color', '#f8404b');
+// 			var render = template.compile(icons)
+// 			var html = render({
+// 				icons: iconsData
+// 			})
+// 			$('.intelligent-super-logo-icons').html(html);
+// 			$('.intelligent-button').on('click', function () {
+// 				if ($(this).text() == '查看更多') {
+// 					$(this).text('收起')
+// 				} else {
+// 					$(this).text('查看更多')
+// 				}
+// 				$('.intelligent-super-logo-icons').toggleClass('showMore')
+// 			})
 
-			var render1 = template.compile(lists)
-			var html1 = render1({
-				list: list
-			})
-			$('.intelligent-super-list').html(html1)
-		})
-	})
-}
+// 			var render1 = template.compile(lists)
+// 			var html1 = render1({
+// 				list: list
+// 			})
+// 			$('.intelligent-super-list').html(html1)
+// 		})
+// 	})
+// }
+
+require([
+    'common',
+    'text!../html/tpl/intelligentIcon.html',
+    'text!../html/tpl/intelligentList.html',
+    'template',
+    'pc',
+    'text!../html/tpl/m-intelligentIcon.html',
+    'text!../html/tpl/m-intelligentList.html'
+], function (c_fnc, icons, lists, template, pc, icons1, lists1) {
+    $(function () {
+        pc.init();
+        $('.nav-items a').eq(0).css('color', '#f8404b');
+        var render = template.compile(icons)
+        var html = render({
+            icons: iconsData
+        })
+        $('.intelligent-super-logo-icons').html(html);
+        $('.intelligent-button').on('click', function () {
+            if ($(this).text() == '查看更多') {
+                $(this).text('收起')
+            } else {
+                $(this).text('查看更多')
+            }
+            $('.intelligent-super-logo-icons').toggleClass('showMore')
+        })
+
+        var render1 = template.compile(lists)
+        var html1 = render1({
+            list: list
+        })
+        $('.intelligent-super-list').html(html1)
+
+
+
+        var render = template.compile(icons1)
+        var html = render({
+            icons: iconsData
+        })
+        $('.m-icons-wrapper').html(html);
+        $('.m-icons-more').on('click', function () {
+            if ($(this).text() == '查看更多') {
+                $(this).text('收起')
+            } else {
+                $(this).text('查看更多')
+            }
+            $('.m-icons-wrapper').toggleClass('m-showMore')
+        })
+        var render1 = template.compile(lists1)
+        var html1 = render1({
+            list: list
+        })
+        $('.icon-inforList').html(html1)
+    })
+})

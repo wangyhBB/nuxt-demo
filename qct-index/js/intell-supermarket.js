@@ -116,21 +116,44 @@ var list = [{
 	title: '融合外卖',
 	detail: '集成美团、饿了么、百度等主流的外卖平台订单模块，彻底解决多平台处理订单低效、繁琐等问题'
 }];
-if (document.body.clientWidth <= 1000) {
-	//判断屏幕大小  在移动端下
-	require([
-		'common',
-		'template',
-		'text!../html/tpl/m-intelligentIcon.html',
-		'text!../html/tpl/m-intelligentList.html',
-		'mobile'
-	], function (c_fnc, template, icons, lists, mb) {
-		mb.init()
+require([
+	'common',
+	'pc',
+	'text!../html/tpl/intelligentIcon.html',
+	'text!../html/tpl/intelligentList.html',
+	'text!../html/tpl/m-intelligentIcon.html',
+	'text!../html/tpl/m-intelligentList.html',
+	'template',
+], function (c_fnc, pc, icons, lists, icons1, lists1, template) {
+	$(function () {
+		pc.init();
+		$('.nav-items a').eq(0).css('color', '#f8404b');
 		var render = template.compile(icons)
 		var html = render({
 			icons: iconsData
 		})
-		$('.m-icons-wrapper').html(html);
+		$('.intelligent-super-logo-icons').html(html);
+		$('.intelligent-button').on('click', function () {
+			if ($(this).text() == '查看更多') {
+				$(this).text('收起')
+			} else {
+				$(this).text('查看更多')
+			}
+			$('.intelligent-super-logo-icons').toggleClass('showMore')
+		})
+
+		var render1 = template.compile(lists)
+		var html1 = render1({
+			list: list
+		})
+		$('.intelligent-super-list').html(html1)
+
+
+		var render2 = template.compile(icons1)
+		var html2 = render2({
+			icons: iconsData
+		})
+		$('.m-icons-wrapper').html(html2);
 		$('.m-icons-more').on('click', function () {
 			if ($(this).text() == '查看更多') {
 				$(this).text('收起')
@@ -139,43 +162,10 @@ if (document.body.clientWidth <= 1000) {
 			}
 			$('.m-icons-wrapper').toggleClass('m-showMore')
 		})
-		var render1 = template.compile(lists)
-		var html1 = render1({
+		var render3 = template.compile(lists1)
+		var html3 = render3({
 			list: list
 		})
-		$('.icon-inforList').html(html1)
+		$('.icon-inforList').html(html3)
 	})
-} else {
-	require([
-		'common',
-		'jquery',
-		'text!../html/tpl/intelligentIcon.html',
-		'text!../html/tpl/intelligentList.html',
-		'template',
-		'pc'
-	], function (c_fnc, $, icons, lists, template, pc) {
-		$(function () {
-			pc.init();
-			$('.nav-items a').eq(0).css('color', '#f8404b');
-			var render = template.compile(icons)
-			var html = render({
-				icons: iconsData
-			})
-			$('.intelligent-super-logo-icons').html(html);
-			$('.intelligent-button').on('click', function () {
-				if ($(this).text() == '查看更多') {
-					$(this).text('收起')
-				} else {
-					$(this).text('查看更多')
-				}
-				$('.intelligent-super-logo-icons').toggleClass('showMore')
-			})
-
-			var render1 = template.compile(lists)
-			var html1 = render1({
-				list: list
-			})
-			$('.intelligent-super-list').html(html1)
-		})
-	})
-}
+})

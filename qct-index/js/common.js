@@ -1,4 +1,4 @@
-define(['jquery', 'template'], function ($, template) {
+define(['jquery'], function ($) {
 	var getQueryString = function getQueryString(name) {
 		var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
 		var r = window.location.search.substr(1).match(reg);
@@ -63,14 +63,23 @@ define(['jquery', 'template'], function ($, template) {
 		link.href = url;
 		head.appendChild(link);
 	}
-	var formateSex = function formateSex(a) {
-		template.helper('sex', function (a) {
-			if (a > 0) {
-				return '女'
-			} else {
-				return '男'
-			}
-		})
+	var keepTwoDecimalFull = function keepTwoDecimalFull(num) {
+		var result = parseFloat(num);
+		if (isNaN(result)) {
+			alert('传递参数错误，请检查！');
+			return false;
+		}
+		result = Math.round(num * 100) / 100;
+		var s_x = result.toString();
+		var pos_decimal = s_x.indexOf('.');
+		if (pos_decimal < 0) {
+			pos_decimal = s_x.length;
+			s_x += '.';
+		}
+		while (s_x.length <= pos_decimal + 2) {
+			s_x += '0';
+		}
+		return s_x;
 	}
 	// 提醒发货提示框
 	// var tipsMark = function (_this, top, left, title, timer) {
@@ -258,10 +267,10 @@ define(['jquery', 'template'], function ($, template) {
 		verifyCode: verifyCode,
 		dynamicLoadJs: dynamicLoadJs,
 		dynamicLoadCss: dynamicLoadCss,
-		formateSex: formateSex,
 		// tipsMark: tipsMark,
 		// confirmMark: confirmMark,
 		cutDowm: cutDowm,
-		shareTo: shareTo
+        shareTo: shareTo,
+        keepTwoDecimalFull:keepTwoDecimalFull
 	}
 })

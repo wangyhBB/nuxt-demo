@@ -1,4 +1,9 @@
-define(['common'], function (c_fnc) {
+define([
+    'common', 
+    'template',
+	// 'text!../html/m-header.html',
+	'text!../html/m-footer.html',
+], function (c_fnc, template, footer) {
 	var init = function () {
 		//导航hover 
 		var navIndex; //hover选中的位置
@@ -21,15 +26,15 @@ define(['common'], function (c_fnc) {
 		});
 		//登入hover
 		$('.nav-login').hover(function () {
-            $('.login-state').slideDown();
-            $('.shopMask').show()
+			$('.login-state').slideDown();
+			$('.shopMask').show()
 		}, function () {
-            $('.login-state').stop(true, false).slideUp();
-            $('.shopMask').hide()
-        });
-        $('.nav-login').on('click',function(){
-            window.location.href = 'accountCenter.html';
-        })
+			$('.login-state').stop(true, false).slideUp();
+			$('.shopMask').hide()
+		});
+		$('.nav-login').on('click', function () {
+			window.location.href = 'accountCenter.html';
+		})
 		$(window).on('scroll', function () {
 			var top = $(this).scrollTop();
 			if (top >= 100) {
@@ -42,7 +47,54 @@ define(['common'], function (c_fnc) {
 			$(window).scrollTop(0);
 		})
         // $('#login').text(123)
-        c_fnc.verifyCode();//验证码
+        
+
+        // var render = template.compile(header)
+        // var html = render();
+        var render1 = template.compile(footer);
+        var html1  = render1();
+		// $('.app').append(html)
+		$('.app').append(html1)
+
+
+		// 移动端的
+		$('.nav-login-logo').on('click', function () {
+			$('.nav-bar-list').stop(true, false).toggleClass('ani-list');
+			$('#gb-mask-layer').toggleClass('showMask');
+			$('body').toggleClass('limit-content')
+			if (!$('.nav-bar-list').hasClass('ani-list')) {
+				$('.nav-more').each(function () {
+					$(this).slideUp(500)
+				})
+				$('.nav-item.nav-item-arrow').removeClass('arrow-up')
+				$('.nav-bar-list').off('touchmove')
+			} else {
+				$('.nav-bar-list').on('touchmove', function (e) {
+					e.preventDefault()
+				})
+			}
+		})
+		$('.nav-item.nav-item-arrow span').on('click', function () {
+			$(this).siblings('.nav-more').stop(true, false).slideToggle(500)
+			$(this).parent().toggleClass('arrow-up')
+			$(this).parent().siblings('.nav-item.nav-item-arrow').removeClass('arrow-up')
+			$(this).parent().siblings('.nav-item.nav-item-arrow').children('.nav-more').slideUp()
+		})
+		$('#gb-mask-layer').on('touchstart', function () {
+			$('.nav-more').each(function () {
+				$(this).slideUp(500)
+			})
+			$('body').removeClass('limit-content')
+			$('.nav-item.nav-item-arrow').removeClass('arrow-up')
+			$('#gb-mask-layer').toggleClass('showMask');
+			$('.nav-bar-list').stop(true, false).toggleClass('ani-list');
+		})
+		$('.nav-more .nav-more-item').on('click', function () {
+			var href = $(this).attr('href');
+			console.log(href)
+			window.location.href = href;
+		})
+		c_fnc.verifyCode(); //验证码
 	}
 	return {
 		init: init

@@ -14,8 +14,8 @@
 	<meta content="email=no" name="format-detection">
 	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/mobile.css">
 	<link rel="stylesheet" media="screen and (min-width: 1001px)" href="../css/style.css">
-	<link rel="shortcut icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
-	<link rel="icon" href="http://www.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="shortcut icon" href="http://erp.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://erp.qcterp.com/favicon.ico" type="image/vnd.microsoft.icon">
 	<script src="../js/include.js"></script>
 	<script src="../js/respond.js"></script>
 	<script src="../js/require.js"></script>
@@ -358,17 +358,76 @@
 		</div>
 	</div>
 	<div class="app">
-		<!-- <include src="m-header.html"></include> -->
+        <!-- <include src="m-header.html"></include> -->
+        <nav class="nav-bar">
+			<div class="nav-login-logo" id="nav-login-logo"></div>
+			<a href="index.html" class="nav-home-logo">
+				<img src="../images/login-logo.png">
+			</a>
+		</nav>
+		<nav class="nav-bar-list">
+			<a class="nav-item" href="index.html">
+				<span>
+					首页
+				</span>
+			</a>
+			<a class="nav-item" href="intelligent-erp.html">
+				<span>
+					智能ERP
+				</span>
+			</a>
+			<a class="nav-item nav-item-arrow">
+				<span>
+					智能硬件
+				</span>
+				<div class="nav-more ">
+					<p href="#" class="nav-more-item">智能pos</p>
+					<p href="#" class="nav-more-item">MINI 移动支付终端</p>
+					<p href="#" class="nav-more-item">台式扫码支付终端</p>
+					<p href="#" class="nav-more-item">pc收银一体机</p>
+					<p href="#" class="nav-more-item">智能扫码棒</p>
+				</div>
+			</a>
+			<a class="nav-item nav-item-arrow">
+				<span>
+					关于我们
+				</span>
+				<div class="nav-more">
+					<p href="aboutUs.html?index=0" class="nav-more-item">公司简介</p>
+					<p href="aboutUs.html?index=1" class="nav-more-item">公司文化</p>
+					<p href="aboutUs.html?index=2" class="nav-more-item">联系我们</p>
+					<p href="aboutUs.html?index=3" class="nav-more-item">分支结构</p>
+				</div>
+			</a>
+			<a class="nav-item nav-item-arrow">
+				<span>
+					公司动态
+				</span>
+				<div class="nav-more">
+					<p href="newsReport.html?type=0" class="nav-more-item">新闻报道</p>
+					<p href="newsReport.html?type=1" class="nav-more-item">政府关怀</p>
+					<p href="newsReport.html?type=2" class="nav-more-item">公司活动</p>
+					<p href="newsReport.html?type=3" class="nav-more-item">系统公告</p>
+					<p href="newsReport.html?type=4" class="nav-more-item">行业资讯</p>
+				</div>
+			</a>
+			<a class="nav-item" href="joinUs.html">
+				<span>
+					加入我们
+				</span>
+			</a>
+		</nav>
+		<div id="gb-mask-layer"></div>
 		<div class="mb-content">
 
 		</div>
-		<include src="m-footer.html"></include>
+		<!-- <include src="m-footer.html"></include> -->
 	</div>
 	<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&ak=SOqIGFBGiSx4LSDogpDWuSc1wQubcpQn&services=&t=20180629105706"></script>
 	<script>
-		require(['common', 'jquery'], function (c_fnc) {
+		require(['common'], function (c_fnc) {
 			c_fnc.dynamicLoadCss('../css/swipebox.css')
-			c_fnc.dynamicLoadJs('../js/ios-orientationchange-fix.js')
+			// c_fnc.dynamicLoadJs('../js/ios-orientationchange-fix.js')
 			c_fnc.dynamicLoadJs('../js/jquery.swipebox.js')
 			c_fnc.dynamicLoadJs('../js/aboutUs.js')
 		})

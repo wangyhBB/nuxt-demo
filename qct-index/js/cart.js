@@ -6,6 +6,7 @@ if (document.body.clientWidth <= 1000) {
 } else {
 	require(['jquery', 'common', 'pc'], function ($, c_fnc, pc) {
 		$(function () {
+
 			pc.init()
 			// .shoppingCart-null 没有商品的情况
 			var checkAllState = false; //全选状态
@@ -20,9 +21,11 @@ if (document.body.clientWidth <= 1000) {
 					var number = $(this).parent().siblings().find('.shoppingBtns').find('.shoppingBtns-number').val() * 1;
 					var count = ($(this).parent().siblings().find('.order-price').text()) * 1;
 					var totle = number * count;
-					console.log(totle)
+					// console.log(totle)
 					sum += (count * number);
 				})
+				sum = c_fnc.keepTwoDecimalFull(sum);
+				// console.log(sum)
 				$('#sum').text('￥' + sum)
 			}
 			$('#sum').text('￥' + sum)
@@ -66,8 +69,8 @@ if (document.body.clientWidth <= 1000) {
 						$('.checkBoxAll').each(function () {
 							$(this).addClass('boxChecked')
 						})
-                    }
-                    $('#selectNumber').text(startLength)
+					}
+					$('#selectNumber').text(startLength)
 				} else {
 					startLength -= 1;
 					$(this).removeClass('boxChecked')
@@ -77,8 +80,8 @@ if (document.body.clientWidth <= 1000) {
 						$('.checkBoxAll').each(function () {
 							$(this).removeClass('boxChecked')
 						})
-                    }
-                    $('#selectNumber').text(startLength)
+					}
+					$('#selectNumber').text(startLength)
 				}
 			})
 			//增加
@@ -86,14 +89,19 @@ if (document.body.clientWidth <= 1000) {
 			$('.shoppingBtns-addBtn').on('click', function () {
 				var val = $(this).siblings('.shoppingBtns-number').val() * 1;
 				val++;
+				// 点击加选中  物品的需求暂时没做
 				// $(this).parent().parent().siblings().find('.checkBoxItem').addClass('boxChecked')
 				if (val > 99) {
 					alert('上线选择99')
+					val = 99;
 					$(this).siblings('.shoppingBtns-number').val(99)
 				} else {
 					$(this).siblings('.shoppingBtns-number').val(val)
 					sumPrice()
 				}
+				var personPrice = $(this).parent().parent().siblings().find('.order-price').text() * 1; //获取单价
+				var smallSum = (val * personPrice).toFixed(2); //小计价格
+				$(this).parent().parent().siblings('.smallSum').text(smallSum) //小计价格
 			})
 			// shoppingBtns-reduceBtn
 			$('.shoppingBtns-reduceBtn').on('click', function () {
@@ -101,11 +109,15 @@ if (document.body.clientWidth <= 1000) {
 				val--;
 				if (val <= 0) {
 					$(this).siblings('.shoppingBtns-number').val(1)
-					alert('选购商品数量不能为0')
+					val = 1
+					// alert('选购商品数量不能为0')
 				} else {
 					$(this).siblings('.shoppingBtns-number').val(val)
 					sumPrice()
 				}
+				var personPrice = $(this).parent().parent().siblings().find('.order-price').text() * 1; //获取单价
+				var smallSum = (val * personPrice).toFixed(2); //小计价格
+				$(this).parent().parent().siblings('.smallSum').text(smallSum) //小计价格
 			})
 			// 获取所有删除id集合
 			$('.deleteAllWord').on('click', function () {
@@ -119,8 +131,8 @@ if (document.body.clientWidth <= 1000) {
 						if (RemainingLength == 0) {
 							$('.shoppingCart-goodsList').hide()
 							$('.shoppingCart-null').show()
-                        }
-                        maxBoxLength = 0
+						}
+						maxBoxLength = 0
 					}
 				})
 				// 如果没有选中的提示
@@ -139,7 +151,8 @@ if (document.body.clientWidth <= 1000) {
 				if (RemainingLength == 0) {
 					$('.shoppingCart-goodsList').hide()
 					$('.shoppingCart-null').show()
-				}
+                }
+                sumPrice()
 			});
 			// 结算 跳转确认订单页面
 			$('.cartGoSum').on('click', function () {

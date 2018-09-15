@@ -13,8 +13,12 @@ if (document.body.clientWidth <= 1000) {
         pc.init()
         $('.message-number').text('验证短信已发送至'+ c_fnc.getQueryString('tel') +'的手机')
         $('.message-verify').verifyCodeN()
+        $("#nexTsliderVerfiy").on('click',function(){
+            window.location.href = 'login.html';
+        })
 		$('.message-verify').on('click', function () {
 			$(this).verifyCodeN()
         })
+       
     })
 }
