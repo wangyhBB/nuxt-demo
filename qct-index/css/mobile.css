@@ -868,7 +868,12 @@ b.shoppingLogin {
 }
 .intell-bg{
     height: 9.7rem;
-    background: url('../images/erp_banner_01.jpg') 0 0 no-repeat;
+    background: url('../images/erp_banner_001.jpg') 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+.intell-bg1{
+    height: 9.7rem;
+    background: url('../images/erp_banner_002.jpg') 0 0 no-repeat;
     background-size: 100% 100%;
 }
 .intell-bg-span{
