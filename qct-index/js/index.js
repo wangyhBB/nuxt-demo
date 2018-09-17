@@ -84,7 +84,7 @@ require(['pc', 'superSlide','swiper'], function (pc, superSlide,swiper) {
 		pc.init()
 		//首页轮播
 		$(window).on('resize', function () {
-            console.log('231214')
+            // console.log('231214')
 			$("#slideBox").slide({
 				mainCell: ".bd ul",
 				effect: "fold",
@@ -101,8 +101,8 @@ require(['pc', 'superSlide','swiper'], function (pc, superSlide,swiper) {
 			interTime: 8000,
 			mouseOverStop: false,
 			startFun: function (i, c, slider, titCell, mainCell, targetCell, prevCell, nextCell) {
-				console.log(i)
-				console.log(slider)
+				// console.log(i)
+				// console.log(slider)
 				$('#slideBox .bd ul li').eq(i).find('.bannerInfo').addClass('bannerBlock')
 				$('#slideBox .bd ul li').eq(i).find('.leftBannerInfo').addClass('animated slideInLeft')
 				$('#slideBox .bd ul li').eq(i).find('.rightBannerInfo').addClass('animated slideInDown')
